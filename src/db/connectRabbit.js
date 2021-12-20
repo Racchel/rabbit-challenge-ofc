@@ -1,9 +1,8 @@
 import amqp from 'amqplib';
-
-const RABBIT_URL = 'amqp://localhost'
+import { rabbitConnectionString } from './rabbitConfig'
 
 const connectChannel = async (queue) => {
-  connection = await amqp.connect(RABBIT_URL)
+  connection = await amqp.connect(rabbitConnectionString)
   const ch = await connection.createChannel()
   const isQueueAssert = await ch.assertQueue(queue, { durable: true })
 

@@ -4,7 +4,7 @@ const database = new Sequelize(
     'db',
     'user',
     'password',
-    {dialect: 'mysql', host: 'host'}
+    {dialect: 'mysql', host: 'localhost'}
 );
  
 export { database };

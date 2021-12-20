@@ -1,5 +1,7 @@
+import { createBeneficiaryService } from '../services/beneficiaryService'
+
 const produceBeneficiary = (req, res) => {
-  return
+  return createBeneficiaryService(res.body)
 }
 
-module.exports.produceBeneficiary = produceBeneficiary
+export { produceBeneficiary };

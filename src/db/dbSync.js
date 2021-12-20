@@ -1,5 +1,4 @@
-import { database } from './connect';
-import { BeneficiaryModel } from '../model/beneficiaryModel';
+import { database } from './connect.js';
 
 (async () => {
     try {
@@ -8,4 +7,4 @@ import { BeneficiaryModel } from '../model/beneficiaryModel';
     } catch (err) {
         console.log(err);
     }
-})
+})();
